@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
+body {
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #f7f7e3;
+  border-style: solid;
+  border-width: 0px 0px medium 0px;
+}
+
+.navbar-brand {
+  font-family: 'Righteous', cursive;
+  font-size: x-large;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.log {
+  font-family: 'Oswald', cursive;
+  font-size: x-large;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: black;
+}
+
+.in {
+  color: #128818;
+}
+
+.in:hover {
+  color: #13b31b;
+  text-decoration: none;
+}
+
+.out {
+  color: #183070;
+}
+
+.out:hover {
+  color: #335fd8;
+  text-decoration: none;
+}
