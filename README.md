@@ -6,6 +6,8 @@
 ![Lista](r3.png)
 # Descrição
 ![Descrição](r5.png)
+# Seu perfil
+![Seu perfil](r7.png)
 
 # Cores (js)
 ![Cores](r6.png)
