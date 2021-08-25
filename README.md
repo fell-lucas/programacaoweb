@@ -1,13 +1,19 @@
-# Página inicial
+### Grupo: Lucas Fell, Igor Dalepiane e Ícaro Crespo
+
+### Projeto Receitas Delit
+
+Abaixo seguem imagens ilustrativas do projeto desenvolvido
+
+## Página inicial
 ![Página inicial](r1.png)
-# Login / Cadastro
+## Login / Cadastro
 ![Login](r2.png) ![Cadastro](r4.png)
-# Lista
+## Lista
 ![Lista](r3.png)
-# Descrição
+## Descrição
 ![Descrição](r5.png)
-# Seu perfil
+## Seu perfil
 ![Seu perfil](r7.png)
 
-# Cores (js)
+## Cores (js)
 ![Cores](r6.png)
