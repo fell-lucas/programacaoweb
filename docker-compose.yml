@@ -11,9 +11,18 @@ services:
       - ./:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=admin
+    networks:
+    - main
   php:
-    image: php:7.4-apache
+    build: './'
     ports:
       - 80:80
     volumes:
       - ./:/var/www/html/
+    links:
+      - db
+    networks:
+    - main
+networks:
+  main:
+    driver: bridge
