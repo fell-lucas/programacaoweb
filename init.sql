@@ -1,1 +1,9 @@
 CREATE DATABASE web;
+USE web;
+
+CREATE TABLE `users` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`email` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`password` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	PRIMARY KEY (`id`)
+);
