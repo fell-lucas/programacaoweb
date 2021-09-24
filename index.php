@@ -1,20 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/rainbow.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/home.css">
-  <title>Receitas Delit</title>
-</head>
+<?php include 'header.php' ?>
 
 <body>
   <nav class="navbar navbar-light justify-content-between">
@@ -25,7 +12,7 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="./index.php">
         Receitas Delit
       </a>
       <button type="button" id="btnRandomColors"
@@ -33,11 +20,11 @@
         aleatórias!</button>
     </div>
     <div>
-      <a class="log in" href="./login.html">
+      <a class="log in" href="./login.php">
         Entrar
       </a>
       <span class="log"> / </span>
-      <a class="log out" href="./cadastro.html">
+      <a class="log out" href="./cadastro.php">
         Cadastro
       </a>
     </div>
@@ -48,10 +35,10 @@
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./listReceitas.html">Lista de receitas</a>
+          <a class="nav-link" href="./listReceitas.php">Lista de receitas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./perfil.html">Seu perfil</a>
+          <a class="nav-link" href="./perfil.php">Seu perfil</a>
         </li>
       </ul>
     </div>
@@ -66,7 +53,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <a href="./descricaoReceita.html">
+        <a href="./descricaoReceita.php">
           <img srcset="images/receita1.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div class="carousel-caption">
@@ -79,7 +66,7 @@
         </a>
       </div>
       <div class="carousel-item">
-        <a href="./descricaoReceita.html">
+        <a href="./descricaoReceita.php">
           <img srcset="images/receita2.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div
@@ -93,7 +80,7 @@
         </a>
       </div>
       <div class="carousel-item">
-        <a href="./descricaoReceita.html">
+        <a href="./descricaoReceita.php">
           <img srcset="images/receita3.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div
@@ -125,28 +112,28 @@
     <div class="card">
       <div class="card-receita" style="border: none;">
         <h1>Receitas Populares</h1>
-        <a href="./listReceitas.html">Lista de receitas</a>
+        <a href="./listReceitas.php">Lista de receitas</a>
       </div>
       <hr style="height:2px;border-width:0;color:gray;background-color:gray">
       <div class="card-receita">
         <p>Abóbora assada</p>
         <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.html">Veja mais</a></span>
+            href="./descricaoReceita.php">Veja mais</a></span>
       </div>
       <div class="card-receita">
         <p>Bacalhau crocante</p>
         <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.html">Veja mais</a></span>
+            href="./descricaoReceita.php">Veja mais</a></span>
       </div>
       <div class="card-receita">
         <p>Fricassê de frango</p>
         <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.html">Veja mais</a></span>
+            href="./descricaoReceita.php">Veja mais</a></span>
       </div>
       <div class="card-receita">
         <p>Salmão folhado</p>
         <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.html">Veja mais</a></span>
+            href="./descricaoReceita.php">Veja mais</a></span>
       </div>
     </div>
     <div class="card">
