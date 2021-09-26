@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/centered.css">
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <title>Receitas Delit - Cadastro</title>
-</head>
+<?php include 'components/header.php' ?>
 
 <body>
 
@@ -20,7 +9,7 @@
     <h4>Crie uma nova conta</h4>
 
     <div class="container">
-      <form action="./index.html">
+      <form action="./index.php">
         <div class="form-group row">
           <div class="col-sm-12">
             <label for="username">Usuário</label>
@@ -54,7 +43,7 @@
         </div>
       </form>
       <div class="form-group row col-md-12">
-        <a href="./login.html">Já tem cadastro?</a>
+        <a href="./login.php">Já tem cadastro?</a>
       </div>
     </div>
 

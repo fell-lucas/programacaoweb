@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include 'header.php' ?>
+<?php include 'components/header.php' ?>
 
 <body>
 
@@ -34,7 +34,7 @@
         <a href="#">Esqueceu a senha?</a>
       </div>
       <div class="form-group row col-sm-12">
-        <a href="./cadastro.html">Ainda não tem cadastro?</a>
+        <a href="./cadastro.php">Ainda não tem cadastro?</a>
       </div>
     </div>
 

@@ -1,48 +1,13 @@
 <!doctype html>
 <html lang="en">
 
-<?php include 'header.php' ?>
+<?php include 'components/header.php' ?>
 
 <body>
-  <nav class="navbar navbar-light justify-content-between">
-    <div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="./index.php">
-        Receitas Delit
-      </a>
-      <button type="button" id="btnRandomColors"
-        class="btn btn-sm randomColorsGradient">Cores
-        aleatórias!</button>
-    </div>
-    <div>
-      <a class="log in" href="./login.php">
-        Entrar
-      </a>
-      <span class="log"> / </span>
-      <a class="log out" href="./cadastro.php">
-        Cadastro
-      </a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./listReceitas.php">Lista de receitas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./perfil.php">Seu perfil</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <?php 
+    $active = "home";
+  ?>
+  <?php include 'components/navbar.php' ?>
 
   <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel"
     data-interval="5000">

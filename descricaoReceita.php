@@ -1,61 +1,14 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/rainbow.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/home.css">
-  <title>Receitas Delit</title>
-</head>
+<?php include 'components/header.php' ?>
 
 <body>
-  <nav class="navbar navbar-light justify-content-between">
-    <div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="./index.html">
-        Receitas Delit
-      </a>
-      <button type="button" id="btnRandomColors"
-        class="btn btn-sm randomColorsGradient">Cores
-        aleatórias!</button>
-    </div>
-    <div>
-      <a class="log in" href="./login.html">
-        Entrar
-      </a>
-      <span class="log"> / </span>
-      <a class="log out" href="./cadastro.html">
-        Cadastro
-      </a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="./index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./listReceitas.html">Lista de
-            receitas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./perfil.html">Seu perfil</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <?php 
+    $active = "lista";
+  ?>
+  <?php include 'components/navbar.php' ?>
+
   <div class="cards-wrapper">
     <div class="card">
       <img width="100%" src="./images/receita1.jpeg" alt="cacetinho">
