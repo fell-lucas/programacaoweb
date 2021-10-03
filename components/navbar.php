@@ -16,7 +16,10 @@
   <div>
     <?php 
     if(isset($_SESSION['user']))
-      echo '<a class="log out" href="./php/controller/LogoutController.php">
+      echo '
+      <a class="log">Bem vindo, <b>'.$_SESSION["user"].'</b>!</a>
+      &nbsp;&nbsp;
+      <a class="log out" href="./php/controller/LogoutController.php">
         Sair
       </a>';
     else

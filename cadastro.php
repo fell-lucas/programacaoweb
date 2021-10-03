@@ -9,13 +9,13 @@
     <h4>Crie uma nova conta</h4>
 
     <div class="container">
-      <form action="./index.php">
+      <form action="./php/controller/SignupController.php" method="POST">
         <div class="form-group row">
           <div class="col-sm-12">
-            <label for="username">Usuário</label>
-            <input type="text" class="form-control" name="username"
-              id="username" aria-describedby="helpId"
-              placeholder="Nome de usuário">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email"
+              id="email" aria-describedby="helpId"
+              placeholder="Email">
           </div>
         </div>
         <div class="form-group row">
@@ -48,13 +48,7 @@
     </div>
 
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 </body>
-
 </html>
+
+<?php include('components/js.php');
