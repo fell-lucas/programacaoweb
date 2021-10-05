@@ -6,9 +6,9 @@ class User{
 
     // adicionar construtor
     
-    public function get($user_id)
+    public function get($recipe_id)
 	{
-		$query = $this->db->get_where('users', array('id' => $user_id));
+		$query = $this->db->get_where('users', array('id' => $recipe_id));
 		return $query->row_array();
 	}
 
@@ -18,12 +18,12 @@ class User{
 		return $query->result();
 	}
 
-    public function insert($user){
-        return $this->db->insert('users', $user);
+    public function insert($recipe){
+        return $this->db->insert('users', $recipe);
     }
-    public function update($id, $user){
+    public function update($id, $recipe){
         $this->db->where('id', $id);
-        return $this->db->update('id', $user);
+        return $this->db->update('id', $recipe);
     }
 
     public function delete($id){
