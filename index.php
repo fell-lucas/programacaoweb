@@ -28,7 +28,7 @@ include 'php/utils/Connection.php';
     </ol>
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <a href="./descricaoReceita.php">
+        <a href="./listReceitas.php">
           <img srcset="images/receita1.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div class="carousel-caption">
@@ -41,7 +41,7 @@ include 'php/utils/Connection.php';
         </a>
       </div>
       <div class="carousel-item">
-        <a href="./descricaoReceita.php">
+        <a href="./listReceitas.php">
           <img srcset="images/receita2.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div
@@ -55,7 +55,7 @@ include 'php/utils/Connection.php';
         </a>
       </div>
       <div class="carousel-item">
-        <a href="./descricaoReceita.php">
+        <a href="./listReceitas.php">
           <img srcset="images/receita3.jpg" alt="responsive image"
             class="d-block img-fluid">
           <div
