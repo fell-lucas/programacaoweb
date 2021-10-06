@@ -22,6 +22,13 @@ class Recipe{
 		return $result;
 	}
 
+	public function getAllByUserId($userId)
+	{
+		$sql = "SELECT * FROM recipes WHERE user=$userId";
+		$result = $this->db->query($sql)->fetchAll();
+		return $result;
+	}
+
 	public function getAllOrderByAccess()
 	{
 		$sql = "SELECT * FROM recipes ORDER BY access DESC LIMIT 4";

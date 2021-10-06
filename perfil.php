@@ -1,6 +1,11 @@
 <?php
 include 'php/utils/Functions.php';
+include 'php/model/Recipe.php';
+include 'php/utils/Connection.php';
 session_start();
+!isset($_SESSION['user']) ? redirect('index', 'Erro!:~:Você não está logado.:~:error') : '';
+$recipeClass = new Recipe($conn);
+$listRecipes = $recipeClass->getAllByUserId($_SESSION['userId']);
 ?>
 
 <!doctype html>
@@ -23,33 +28,26 @@ session_start();
           <div class="d-flex w-100 justify-content-between">
             <h5 style="color: #d3d39e;" class="mb-1">E-mail</h5>
           </div>
-          <p class="mb-1">fulano@bol.com</p>
-        </a>
-        <a
-          class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 style="color: #d3d39e;" class="mb-1">Senha</h5>
-          </div>
-          <p class="mb-1">***********</p>
+          <p class="mb-1"><?php echo $_SESSION['user'] ?></p>
         </a>
       </div>
-      
-      <div class="carousel-caption justify-content-center align-items-center">
-          <span class="btn btn-sm btn-outline-warning">Alterar senha</span>
-          <span class="btn btn-sm btn-outline-danger">Excluir conta</span>
-        </div>
     </div>
     <div class="card">
     <h3 align="center">Suas receitas</h3>
-      <div class="list-group">
-          <ol>
-              <li><a href="#">Receita 2</a></li>
-              <li><a href="#">Receita 3</a></li>
-              <li><a href="#">Receita 5</a></li>
-              <li><a href="#">Receita 1</a></li>
-              <li><a href="#">Receita 4</a></li>
-          </ol>
-      </div>
+    <?php 
+    if(empty($listRecipes)){
+      echo "<div class='wrapper'>";
+      echo "<h2>Você não cadastrou nenhuma receita.</h2>";
+      echo "</div>";
+    }else{
+      echo '<div class="list-group"><ol>';
+      foreach ($listRecipes as &$recipe) {
+        echo '<li><a href="./descricaoReceita.php?id='.$recipe['id'].'">'.$recipe['nameRecipe'].'</a>&nbsp;&nbsp;&nbsp;<span>Total de acessos: '.$recipe['access'].'</span></li>';
+      }
+      echo '</ol></div>';
+    }
+    ?>
+      
     </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

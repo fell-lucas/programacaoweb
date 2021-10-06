@@ -21,7 +21,7 @@
         <div class="form-group row">
           <div class="col-sm-6">
             <label for="password">Senha</label>
-            <input type="text" class="form-control" name="password"
+            <input type="password" class="form-control" name="password"
               id="password" aria-describedby="helpId" placeholder="Senha">
           </div>
           <div class="col-sm-6">

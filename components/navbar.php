@@ -44,10 +44,11 @@
         <a class="nav-link" href="./listReceitas.php">Lista de
           receitas</a>
       </li>
-      <li
-        class="nav-item <?php if ($active=="perfil"): ?> active<?php endif;?>">
-        <a class="nav-link" href="./perfil.php">Seu perfil</a>
-      </li>
+      <?php
+      if(isset($_SESSION['user']))
+      echo '<li class="nav-item '.$active=="perfil" ? 'active' : ''.'<a class="nav-link" href="./perfil.php">Seu perfil</a></li>'
+      ?>
+      
     </ul>
   </div>
 </nav>
