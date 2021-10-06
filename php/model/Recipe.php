@@ -1,35 +1,55 @@
 <?php
 
-class User{
+class Recipe{
 
-    // adicionar atributos?
+	protected PDO $db;
 
-    // adicionar construtor
-    
-    public function get($recipe_id)
+	public function __construct(PDO $db) {
+			$this->db = $db;
+	}
+
+	public function get($recipe_id)
 	{
-		$query = $this->db->get_where('users', array('id' => $recipe_id));
-		return $query->row_array();
+		$sql = "SELECT * FROM recipes WHERE id = $recipe_id";
+		$result = $this->db->query($sql)->fetch();
+		return $result;
 	}
 
 	public function getAll()
 	{
-		$query = $this->db->get('users');
-		return $query->result();
+		$sql = "SELECT * FROM recipes";
+		$result = $this->db->query($sql)->fetchAll();
+		return $result;
 	}
 
-    public function insert($recipe){
-        return $this->db->insert('users', $recipe);
-    }
-    public function update($id, $recipe){
-        $this->db->where('id', $id);
-        return $this->db->update('id', $recipe);
-    }
+	public function getAllOrderByAccess()
+	{
+		$sql = "SELECT * FROM recipes ORDER BY access DESC LIMIT 4";
+		$result = $this->db->query($sql)->fetchAll();
+		return $result;
+	}
 
-    public function delete($id){
-        $this->db->where('id', $id);
-        return $this->db->delete('id');
-    }
+	public function accessIncrease($recipe_id){
+		$recipe = $this->get($recipe_id);
+		$newCount = $recipe['access'];
+		$newCount++;
+		$sql = "UPDATE recipes SET access=$newCount WHERE id = $recipe_id";
+		$result = $this->db->query($sql);
+		return null;
+	}
+
+	public function insert($recipe){
+		return $conn->insert('recipes', $recipe);
+	}
+	public function update($id, $recipe){
+		$conn->where('id', $id);
+		return $conn->update('id', $recipe);
+	}
+
+	public function delete($id){
+		$conn->where('id', $id);
+		return $conn->delete('id');
+	}
 
     //function getById($id)
 	//{

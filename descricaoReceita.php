@@ -1,3 +1,10 @@
+<?php
+include 'php/utils/Functions.php';
+session_start();
+include 'php/model/Recipe.php';
+include 'php/utils/Connection.php';
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -8,13 +15,17 @@
     $active = "lista";
   ?>
   <?php include 'components/navbar.php' ?>
-
+  <?php 
+    $recipeClass = new Recipe($conn);
+    $recipeClass->accessIncrease($_GET['id']);
+    $recipe = $recipeClass->get($_GET['id']);
+  ?>
   <div class="cards-wrapper">
     <div class="card">
       <img width="100%" src="./images/receita1.jpeg" alt="cacetinho">
     </div>
     <div class="card">
-      <h1>Cacetinho no Balaio</h1>
+      <h1><?php echo $recipe['nameRecipe']; ?></h1>
       <hr style="height:2px;border-width:0;color:gray;background-color:gray">
       <h3>Ingredientes</h3>
       <div class="list-group">
@@ -62,7 +73,7 @@
       </div>
     </div>
     <div class="card">
-      <h1>Cacetinho no Balaio</h1>
+      <h1><?php echo $recipe['nameRecipe']; ?></h1>
       <hr style="height:2px;border-width:0;color:gray;background-color:gray">
       <h3>Modo de Preparo</h3>
       <div class="list-group">
@@ -92,7 +103,7 @@
       </div>
     </div>
     <div class="card">
-      <h1>Cacetinho no Balaio</h1>
+      <h1><?php echo $recipe['nameRecipe']; ?></h1>
       <hr style="height:2px;border-width:0;color:gray;background-color:gray">
       <h3>Informações Gerais</h3>
       <div class="list-group">

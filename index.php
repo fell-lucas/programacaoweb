@@ -1,6 +1,8 @@
 <?php
 include 'php/utils/Functions.php';
 session_start();
+include 'php/model/Recipe.php';
+include 'php/utils/Connection.php';
 ?>
 
 <!doctype html>
@@ -13,7 +15,10 @@ session_start();
   $active = "home";
   ?>
   <?php include 'components/navbar.php' ?>
-
+  <?php 
+    $recipeClass = new Recipe($conn);
+    $listRecipes = $recipeClass->getAllOrderByAccess();
+  ?>
   <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel"
     data-interval="5000">
     <ol class="carousel-indicators">
@@ -85,26 +90,21 @@ session_start();
         <a href="./listReceitas.php">Lista de receitas</a>
       </div>
       <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-      <div class="card-receita">
-        <p>Abóbora assada</p>
-        <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.php">Veja mais</a></span>
-      </div>
-      <div class="card-receita">
-        <p>Bacalhau crocante</p>
-        <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.php">Veja mais</a></span>
-      </div>
-      <div class="card-receita">
-        <p>Fricassê de frango</p>
-        <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.php">Veja mais</a></span>
-      </div>
-      <div class="card-receita">
-        <p>Salmão folhado</p>
-        <span class="btn btn-sm btn-outline-primary"><a
-            href="./descricaoReceita.php">Veja mais</a></span>
-      </div>
+        <?php
+        if(empty($listRecipes)){
+          echo "<div class='wrapper'>";
+          echo "<h2>A lista de receitas está vazia.</h2>";
+          echo "</div>";
+        }else{
+          foreach ($listRecipes as &$recipe) {
+            echo "<div class='card-receita'>
+            <p>$recipe[nameRecipe]</p>
+            <span class='btn btn-sm btn-outline-primary'><a
+                href='./descricaoReceita.php?id=$recipe[id]'>Veja mais</a></span>
+          </div>";
+          }
+        }
+      ?>
     </div>
     <div class="card">
       <h1>Sobre</h1>

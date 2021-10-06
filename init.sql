@@ -10,11 +10,13 @@ CREATE TABLE `users` (
 
 CREATE TABLE `recipes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`nameRecipe` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`descr` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`prepare_mode` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`general_informations` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`ingredients` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	`access` INT NOT NULL,
 	`user` INT,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`user`) REFERENCES USERS
+	FOREIGN KEY (`user`) REFERENCES users(id)
 );

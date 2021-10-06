@@ -11,6 +11,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if (password_verify($pw, $result['password'])) {
       session_start();
       $_SESSION['user'] = $email;
+      $_SESSION['userId'] = $result['id'];
       redirect('index', 'Sucesso!:~:Logado com sucesso.:~:success');
     } else {
       redirect('login', 'Erro ao logar.:~:Senha incorreta.:~:error');
