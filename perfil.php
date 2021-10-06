@@ -15,11 +15,8 @@ session_start();
   <?php include 'components/navbar.php' ?>
   
   <div class="cards-wrapper">
-    <div class="card align-items-center">
-      <img width="75%" height="100%" src="./images/user.png" alt="sua foto de perfil">
-    </div>
     <div class="card">
-      <h3>Suas informações</h3>
+      <h3 align="center"> Suas informações</h3>
       <div class="list-group">
         <a
           class="list-group-item list-group-item-action flex-column align-items-start">
@@ -35,15 +32,15 @@ session_start();
           </div>
           <p class="mb-1">***********</p>
         </a>
-        <a
-          class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 style="color: #d3d39e;" class="mb-1">Data de nascimento</h5>
-          </div>
-          <p class="mb-1">21/01/1961</p>
-        </a>
       </div>
-      <h3>Suas receitas</h3>
+      
+      <div class="carousel-caption justify-content-center align-items-center">
+          <span class="btn btn-sm btn-outline-warning">Alterar senha</span>
+          <span class="btn btn-sm btn-outline-danger">Excluir conta</span>
+        </div>
+    </div>
+    <div class="card">
+    <h3 align="center">Suas receitas</h3>
       <div class="list-group">
           <ol>
               <li><a href="#">Receita 2</a></li>
@@ -53,10 +50,6 @@ session_start();
               <li><a href="#">Receita 4</a></li>
           </ol>
       </div>
-      <div class="carousel-caption justify-content-center align-items-center">
-          <span class="btn btn-sm btn-outline-warning">Alterar senha</span>
-          <span class="btn btn-sm btn-outline-danger">Excluir conta</span>
-        </div>
     </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

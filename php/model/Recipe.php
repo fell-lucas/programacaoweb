@@ -39,16 +39,20 @@ class Recipe{
 	}
 
 	public function insert($recipe){
-		return $conn->insert('recipes', $recipe);
+		$sql = "INSERT INTO RECIPES $recipe";
+		$result = $this->db->query($sql)->fetch();
+
+		return $result;
 	}
 	public function update($id, $recipe){
-		$conn->where('id', $id);
-		return $conn->update('id', $recipe);
+		$sql = "UPDATE RECIPES WHERE ID = $id RECIPES $recipe";
+		$result = $this->db->query($sql)->fetch();
+		return $result;
 	}
 
 	public function delete($id){
-		$conn->where('id', $id);
-		return $conn->delete('id');
+		$sql = "DELETE FROM RECUPES WHERE ID =  $id";
+		$result = $this->db->query($sql)->fetch();
 	}
 
     //function getById($id)
